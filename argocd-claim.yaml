@@ -3,7 +3,10 @@ kind: MyArgoCd
 metadata:
   name: myargocd-claim
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
   repos-urls: 
     - "git@github.com:achrefbenmbarek1/libraryManagementBackConfig.git"
     - "git@github.com:achrefbenmbarek1/libraryManagementAppOfApps.git"
+    - "git@github.com:achrefbenmbarek1/argocdCrossplaneResources.git"
